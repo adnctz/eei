@@ -1,0 +1,22 @@
+.avatar,
+.no-avatar {
+  --avatar: 36px;
+  width: var(--avatar);
+  height: var(--avatar);
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  background-position: center;
+  background-color: hsl(0, 0%, 80%);
+}
+
+.avatar {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.no-avatar {
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,5 @@
+<div *ngIf="user?.avatar" class="avatar" [style.backgroundImage]="'url(' + user?.avatar +')'"></div>
+<div *ngIf="!user?.avatar" class="no-avatar">
+    <span>{{user.firstname[0]}}</span>
+    <span>{{user.lastname[0]}}</span>
+</div>

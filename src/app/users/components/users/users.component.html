@@ -8,11 +8,7 @@
             <ng-container matColumnDef="avatar">
                 <th mat-header-cell *matHeaderCellDef> </th>
                 <td mat-cell *matCellDef="let user" (click)="updateUser(user)">
-                    <img *ngIf="user?.avatar" src="{{user?.avatar}}" alt="" srcset="">
-                    <div *ngIf="!user?.avatar" class="no-avatar">
-                        <span>{{user?.firstname[0]}}</span>
-                        <span>{{user?.lastname[0]}}</span>
-                    </div>
+                    <eei-avatar [user]="user"></eei-avatar>
                 </td>
             </ng-container>
 
@@ -67,11 +63,7 @@
             <mat-list-option *ngFor="let user of users" [value]="user" (click)="updateUser(user)">
                 <div class="user-list-item">
                     <span class="list-avatar">
-                        <img *ngIf="user?.avatar" src="{{user?.avatar}}" alt="" srcset="">
-                        <span *ngIf="!user?.avatar" class="no-avatar">
-                            <span>{{user.firstname[0]}}</span>
-                            <span>{{user.lastname[0]}}</span>
-                        </span>
+                        <eei-avatar [user]="user"></eei-avatar>
                     </span>
 
                     <div class="item-details">

@@ -42,8 +42,6 @@ export class UsersComponent implements OnInit, AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
-    console.log(this.dataSource);
   }
 
   ngOnDestroy(): void {
